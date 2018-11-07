@@ -1,0 +1,24 @@
+apiVersion: federation.kubeless.io/v1alpha1
+kind: FederatedFunction
+metadata:
+  name: get-python
+  namespace: default
+  label:
+    created-by: kubeless
+    function: get-python
+spec:
+  template:
+    metadata:
+      label:
+        created-by: kubeless
+        function: get-python
+    spec:
+      runtime: python2.7
+      timeout: "180"
+      handler: helloget.foo
+      deps: ""
+      checksum: sha256:d251999dcbfdeccec385606fd0aec385b214cfc74ede8b6c9e47af71728f6e9a
+      function-content-type: text
+      function: |
+        def foo(event, context):
+            return "hello world"

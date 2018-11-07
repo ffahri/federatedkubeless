@@ -1,0 +1,25 @@
+#template type
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: federatedfunctions.federation.kubeless.io
+spec:
+  group: federation.kubeless.io
+  names:
+    kind: FederatedFunction
+    plural: federatedfunctions
+  scope: Namespaced
+  version: v1alpha1
+---
+# placement type
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: federatedfunctionplacements.federation.kubeless.io
+spec:
+  group: federation.kubeless.io
+  names:
+    kind: FederatedFunctionPlacement
+    plural: federatedfunctionplacements
+  scope: Namespaced
+  version: v1alpha1

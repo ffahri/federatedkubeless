@@ -1,0 +1,9 @@
+apiVersion: federation.kubeless.io/v1alpha1
+kind: FederatedFunctionPlacement
+metadata:
+  name: get-python
+  namespace: default
+spec:
+  clusterNames:
+  - cluster2
+  - cluster1
